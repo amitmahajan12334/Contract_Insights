@@ -12,5 +12,6 @@ jsonschema
 PyMuPDF
 pdfminer.six
 pdfplumber
+matplotlib
 
 # command for app run: python -m streamlit run app.py
