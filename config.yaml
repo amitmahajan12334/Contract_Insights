@@ -1,0 +1,11 @@
+openai:
+  openai_endpoint: "https://ae-genai-coe-pod7-openai.openai.azure.com/"
+  openai_api_key: "bc0cdd42d7194e908be8aa3b59232e21"
+  model: gpt-4
+  deployment_name: "gpt-4o"
+  api_version: "2023-03-15-preview"
+
+azure_storage:
+  storage_connection_string: "DefaultEndpointsProtocol=https;AccountName=aegenaisolution03hubstg;AccountKey=BcXgaRJmfKObNueBkaZ8RszTDMGIxrf6SOdz2DGYmPI9X8BCTaD261Fq1fUX6qPx2yjmIyukXfWY+ASt79yFCA==;EndpointSuffix=core.windows.net"
+  container_name: "chunkindoc7-14"
+  evaluation_container_name: "evaluation-excels"

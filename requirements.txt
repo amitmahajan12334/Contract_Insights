@@ -1,0 +1,16 @@
+# pip install -r requirements.txt
+streamlit
+pandas
+azure-storage-blob
+openai
+PyYAML
+Pillow
+xlrd
+openpyxl
+requests
+jsonschema
+PyMuPDF
+pdfminer.six
+pdfplumber
+
+# command for app run: python -m streamlit run app.py
