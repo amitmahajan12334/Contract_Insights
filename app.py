@@ -338,11 +338,11 @@ with col2:
     """, unsafe_allow_html=True)
 
 
-# st.markdown(f"""
-#     <div style="margin-bottom: 0px;">
-#         <b>Selected PDF File: </b> <span style="color: chocolate;">{selected_blob}</span>
-#     </div>
-#     """, unsafe_allow_html=True)
+st.markdown(f"""
+    <div style="margin-bottom: 0px;">
+        <b>Selected PDF File: </b> <span style="color: chocolate;">{selected_blob}</span>
+    </div>
+    """, unsafe_allow_html=True)
 
 with st.expander("PDF Preview", expanded=False):
     if st.session_state.view_pdf:
