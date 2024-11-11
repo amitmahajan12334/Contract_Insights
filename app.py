@@ -18,9 +18,11 @@ with open('config.yaml', 'r') as file:
     config = yaml.safe_load(file)
 
 # Azure Blob Storage configuration
-storage_connection_string = config['azure_storage']['storage_connection_string']
-evaluation_container_name = config['azure_storage']['evaluation_container_name']
+# storage_connection_string = config['azure_storage']['storage_connection_string']
+# evaluation_container_name = config['azure_storage']['evaluation_container_name']
 # evaluation_excel_blob_name = "Evaluation_Montefiore - NTTD - IT Outsourcing - MSA_7_14.xlsx"
+storage_connection_string = st.secrets["azure_storage"]["storage_connection_string"]
+evaluation_container_name = st.secrets["azure_storage"]["evaluation_container_name"]
 
 # Define the output directory (inside the "Insights" folder)
 output_dir = os.path.join("Insights")
@@ -237,12 +239,21 @@ with st.sidebar:
     # st.image(img_resized)
 
     # **Configuration Section with Light Border**
+    # with st.expander("Configuration", expanded=True):
+    #     st.markdown(f"""
+    #         <div style="padding: 10px;">
+    #         <p><strong>Model: </strong><span style="text-transform: uppercase;">{config['openai']['model']}</span></p>
+    #         <p><strong>Deployment Name: </strong><span style="text-transform: uppercase;">{config['openai']['deployment_name']}</span></p>
+    #         <p><strong>Version: </strong>{config['openai']['api_version']}</p>
+    #         </div>
+    #     """, unsafe_allow_html=True)
+
     with st.expander("Configuration", expanded=True):
         st.markdown(f"""
             <div style="padding: 10px;">
-            <p><strong>Model: </strong><span style="text-transform: uppercase;">{config['openai']['model']}</span></p>
-            <p><strong>Deployment Name: </strong><span style="text-transform: uppercase;">{config['openai']['deployment_name']}</span></p>
-            <p><strong>Version: </strong>{config['openai']['api_version']}</p>
+            <p><strong>Model: </strong><span style="text-transform: uppercase;">{st.secrets["openai"]["model"]}</span></p>
+            <p><strong>Deployment Name: </strong><span style="text-transform: uppercase;">{st.secrets["openai"]["deployment_name"]}</span></p>
+            <p><strong>Version: </strong>{st.secrets["openai"]["api_version"]}</p>
             </div>
         """, unsafe_allow_html=True)
 
