@@ -7,10 +7,15 @@ with open('config.yaml', 'r') as file:
     config = yaml.safe_load(file)
 
 # Ensure you have the correct API URL and headers set up
-openai_endpoint = config['openai']['openai_endpoint']
-openai_api_key = config['openai']['openai_api_key']
-deployment_name = config['openai']['deployment_name']
-api_version = config['openai']['api_version']
+# openai_endpoint = config['openai']['openai_endpoint']
+# openai_api_key = config['openai']['openai_api_key']
+# deployment_name = config['openai']['deployment_name']
+# api_version = config['openai']['api_version']
+
+openai_endpoint = st.secrets["openai"]["openai_endpoint"]
+openai_api_key = st.secrets["openai"]["openai_api_key"]
+deployment_name = st.secrets["openai"]["deployment_name"]
+api_version = st.secrets["openai"]["api_version"]
 api_url = f"{openai_endpoint}openai/deployments/{deployment_name}/chat/completions?api-version={api_version}"
 
 headers = {
