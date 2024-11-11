@@ -257,8 +257,6 @@ with st.sidebar:
             </div>
         """, unsafe_allow_html=True)
 
-    st.write(storage_connection_string)
-
     containers = list_containers()
     if containers:
         selected_container = st.selectbox("Select Container", containers)
