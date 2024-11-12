@@ -63,7 +63,7 @@ def list_blobs(container_name):
         return []
 
 # Streamlit UI
-st.set_page_config(page_title="DocsInSight", page_icon=":book:", layout="wide")
+st.set_page_config(page_title="DocInSights", page_icon=":book:", layout="wide")
 
 def download_evaluation_file_from_azure_blob(evaluation_container_name, evaluation_excel_blob_name, download_path):
     """Download file from Azure Blob Storage."""
@@ -295,7 +295,7 @@ with st.sidebar:
     else:
         st.error("No containers found. Please check the Azure Blob Storage configuration.")
 
-    with st.expander("Instructions - How to Use DocuSights"):
+    with st.expander("Instructions - How to Use DocInSights"):
         st.markdown(f"""
         **Step 1: Select a Container**
         - Choose a container from Azure Blob Storage that holds your PDF files. This will allow you to access the PDF files stored inside.
@@ -322,7 +322,7 @@ with st.sidebar:
 
 # st.markdown("""
 # <div style="margin-top: -10px;">
-#     <h1 style="color: black; font-weight: bold; font-size: 40px; margin-bottom: -22px;">DocuSights</h1>
+#     <h1 style="color: black; font-weight: bold; font-size: 40px; margin-bottom: -22px;">DocInSights</h1>
 #     <p style="margin-bottom: 30px; font-weight: bold; font-size: 12px;">A quick insights into your documents</p>
 # </div>
 # """, unsafe_allow_html=True)
@@ -343,7 +343,7 @@ with col2:
     # Display the text beside the image
     st.markdown("""
     <div style="margin-top: -38px;">
-        <h1 style="color: black; font-weight: bold; font-size: 43px; margin-bottom: -24px;">DocsInSight</h1>
+        <h1 style="color: black; font-weight: bold; font-size: 43px; margin-bottom: -24px;">DocInSights</h1>
         <p style="margin-bottom: 30px; font-weight: bold; font-size: 14px;">A quick insights into your documents</p>
     </div>
     """, unsafe_allow_html=True)
